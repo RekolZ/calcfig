@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TriangleActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="416dp"
+        android:layout_height="39dp"
+        android:background="#2CEDC0"
+        android:text="Формулы площади треугольника"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="-2dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="153dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="41dp"
+        android:src="@drawable/img"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:layout_editor_absoluteX="116dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="Формула Геррона"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:layout_editor_absoluteX="142dp" />
+
+    <EditText
+        android:id="@+id/sideC"
+        android:layout_width="148dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="92dp"
+        android:ems="10"
+        android:hint="третья сторона"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:layout_editor_absoluteX="121dp" />
+
+    <EditText
+        android:id="@+id/sideA"
+        android:layout_width="148dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="первая сторона"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:layout_editor_absoluteX="121dp" />
+
+    <EditText
+        android:id="@+id/sideB"
+        android:layout_width="148dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:hint="вторая сторона"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:layout_editor_absoluteX="121dp" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="146dp"
+        android:layout_height="43dp"
+        android:text="WICHISLIT"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="412dp" />
+
+    <TextView
+        android:id="@+id/triangleArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:width="412dp"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/triangleHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="412dp"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/triangleArea"
+        tools:layout_editor_absoluteX="-2dp" />
+
+    <TextView
+        android:id="@+id/triangleRadiusLow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="412dp"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/triangleHeight"
+        tools:layout_editor_absoluteX="-2dp" />
+
+    <TextView
+        android:id="@+id/triangleRadius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="412dp"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/triangleRadiusLow"
+        tools:layout_editor_absoluteX="-2dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
