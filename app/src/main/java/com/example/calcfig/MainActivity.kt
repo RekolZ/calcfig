@@ -15,4 +15,16 @@ class MainActivity : AppCompatActivity() {
         val triangleActivity = Intent(this, TriangleActivity::class.java)
         startActivity(triangleActivity)
     }
+    public fun onTrapezoidButtonClick(view: View){
+        val trapezoidActivity = Intent(this, TrapezoidActivity::class.java)
+        startActivity(trapezoidActivity)
+    }
+    public fun onSquareButtonClick(view: View){
+        val squareActivity = Intent(this, SquareActivity::class.java)
+        startActivity(squareActivity)
+    }
+    public fun onRectangleButtonClick(view: View){
+        val rectangleActivity = Intent(this, RectangleActivity::class.java)
+        startActivity(rectangleActivity)
+    }
 }

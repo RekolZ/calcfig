@@ -4,6 +4,152 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TrapezoidActivity">
+    tools:context=".TriangleActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="416dp"
+        android:layout_height="39dp"
+        android:background="#2CEDC0"
+        android:text="Формулы площади трапеции"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="152dp"
+        android:text="трапецияUWU"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.708"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <EditText
+        android:id="@+id/H"
+        android:layout_width="148dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="142dp"
+        android:ems="10"
+        android:hint="высота"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/sideA"
+        android:layout_width="148dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="142dp"
+        android:ems="10"
+        android:hint="первая сторона"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/sideB"
+        android:layout_width="148dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="142dp"
+        android:ems="10"
+        android:hint="вторая сторона"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="146dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="149dp"
+        android:onClick="onTriangleButtonCalculate"
+        android:text="WICHISLIT"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/H" />
+
+    <TextView
+        android:id="@+id/trapezoidArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:width="412dp"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/trapezoidRadius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="412dp"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TrapezoidDiagonal2" />
+
+    <TextView
+        android:id="@+id/TrapezoidDiagonal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="412dp"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trapezoidDiagonal1" />
+
+    <TextView
+        android:id="@+id/trapezoidDiagonal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="412dp"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trapezoidMidLine" />
+
+    <TextView
+        android:id="@+id/trapezoidMidLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="412dp"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trapezoidArea" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="181dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="115dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/trapezoid" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

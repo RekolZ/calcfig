@@ -13,14 +13,14 @@ class TriangleActivity : AppCompatActivity() {
     }
     public fun onTriangleButtonCalculate(view: View)
     {
-        val textArea = findViewById<TextView>(R.id.triangleArea)
-        val textHeight = findViewById<TextView>(R.id.triangleHeight)
-        val textRadiusLow = findViewById<TextView>(R.id.triangleRadiusLow)
-        val textRadius = findViewById<TextView>(R.id.triangleRadius)
+        val textArea = findViewById<TextView>(R.id.trapezoidArea)
+        val textHeight = findViewById<TextView>(R.id.trapezoidMidLine)
+        val textRadiusLow = findViewById<TextView>(R.id.trapezoidDiagonal1)
+        val textRadius = findViewById<TextView>(R.id.TrapezoidDiagonal2)
 
         val SideA = findViewById<EditText>(R.id.sideA)
         val SideB = findViewById<EditText>(R.id.sideB)
-        val SideC = findViewById<EditText>(R.id.sideC)
+        val SideC = findViewById<EditText>(R.id.H)
 
         val a = SideA.text.toString().toDoubleOrNull()
         val b = SideB.text.toString().toDoubleOrNull()
@@ -43,9 +43,19 @@ class TriangleActivity : AppCompatActivity() {
             return (a * b * c) / (4 * Math.sqrt(pp * (pp-a) * (pp-c)))
         }
         if (a != null && b != null && c != null){
-            textArea.text = "Площадь ${getArea(a,b,c)}"
-            textHeight.text = "Высота ${getHeight(getArea(a,b,c),a)}"
-            textRadiusLow.text = "Площадь ${getHeight(getArea(a,b,c),a)}"
+            if(a+b>c && b+c>a && a+c>b){
+                textArea.text = "Площадь: ${getArea(a,b,c)}"
+                textHeight.text = "Высота: ${getHeight(getArea(a,b,c),a)}"
+                textRadiusLow.text = "radiuslow: ${getRadiuslow(a,b,c)}"
+                textRadius.text = "radiusBig: ${getRadius(a,b,c)}"
+            }
+            else{
+                textArea.text = "не бывает такое ты лгун лгун обманщик"
+            }
+
+        }
+        else{
+            textArea.text = "Ошибка ввода, проверьте введённые данные";
         }
     }
 }

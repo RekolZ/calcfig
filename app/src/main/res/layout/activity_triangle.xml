@@ -14,73 +14,100 @@
         android:text="Формулы площади треугольника"
         android:textAlignment="center"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="-2dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="153dp"
         android:layout_height="145dp"
+        android:layout_marginStart="116dp"
         android:layout_marginTop="41dp"
+        android:layout_marginEnd="142dp"
         android:src="@drawable/img"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:layout_editor_absoluteX="116dp" />
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="142dp"
         android:layout_marginTop="19dp"
+        android:layout_marginEnd="152dp"
         android:text="Формула Геррона"
+        android:textAlignment="center"
         android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:layout_editor_absoluteX="142dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/sideC"
+        android:id="@+id/H"
         android:layout_width="148dp"
         android:layout_height="36dp"
+        android:layout_marginStart="121dp"
         android:layout_marginTop="92dp"
+        android:layout_marginEnd="142dp"
         android:ems="10"
         android:hint="третья сторона"
         android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:layout_editor_absoluteX="121dp" />
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
         android:id="@+id/sideA"
         android:layout_width="148dp"
         android:layout_height="36dp"
+        android:layout_marginStart="121dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="142dp"
         android:ems="10"
         android:hint="первая сторона"
         android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:layout_editor_absoluteX="121dp" />
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
         android:id="@+id/sideB"
         android:layout_width="148dp"
         android:layout_height="36dp"
+        android:layout_marginStart="121dp"
         android:layout_marginTop="56dp"
+        android:layout_marginEnd="142dp"
         android:ems="10"
         android:hint="вторая сторона"
         android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:layout_editor_absoluteX="121dp" />
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
         android:id="@+id/button"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="146dp"
         android:layout_height="43dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="149dp"
+        android:onClick="onTriangleButtonCalculate"
         android:text="WICHISLIT"
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="116dp"
-        tools:layout_editor_absoluteY="412dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/H" />
 
     <TextView
-        android:id="@+id/triangleArea"
+        android:id="@+id/trapezoidArea"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
@@ -90,30 +117,30 @@
         tools:layout_editor_absoluteX="0dp" />
 
     <TextView
-        android:id="@+id/triangleHeight"
+        android:id="@+id/trapezoidMidLine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="412dp"
         android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@+id/triangleArea"
+        app:layout_constraintTop_toBottomOf="@+id/trapezoidArea"
         tools:layout_editor_absoluteX="-2dp" />
 
     <TextView
-        android:id="@+id/triangleRadiusLow"
+        android:id="@+id/trapezoidDiagonal1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="412dp"
         android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@+id/triangleHeight"
+        app:layout_constraintTop_toBottomOf="@+id/trapezoidMidLine"
         tools:layout_editor_absoluteX="-2dp" />
 
     <TextView
-        android:id="@+id/triangleRadius"
+        android:id="@+id/TrapezoidDiagonal2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="412dp"
         android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@+id/triangleRadiusLow"
+        app:layout_constraintTop_toBottomOf="@+id/trapezoidDiagonal1"
         tools:layout_editor_absoluteX="-2dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
